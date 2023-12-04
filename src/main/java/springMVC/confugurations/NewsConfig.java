@@ -13,4 +13,8 @@ public class NewsConfig {
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
+
+    public String getNewsApiServiceHost() {
+        return NEWS_API_SERVICE_HOST;
+    }
 }
