@@ -2,6 +2,7 @@ package Hibernate;
 
 import Hibernate.DAO.CourseDao;
 import Hibernate.DAO.StudentDAO;
+import Hibernate.HibernateSession;
 import Hibernate.model.Course;
 import Hibernate.model.Student;
 import org.hibernate.Session;
@@ -10,10 +11,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Main {
-    private static final Logger logger = LoggerFactory.getLogger(Main.class);
+    private static final Logger logger = LoggerFactory.getLogger(Hibernate.Main.class);
 
     public static void main(String[] args) {
-        try (HibernateSession hibernateSession = new HibernateSession()) {
+        try (Hibernate.HibernateSession hibernateSession = new HibernateSession()) {
             SessionFactory sessionFactory = hibernateSession.getSessionFactory();
             try (Session session = sessionFactory.getCurrentSession()) {
                 session.beginTransaction();

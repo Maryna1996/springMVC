@@ -1,5 +1,6 @@
 package Hibernate.model;
 
+import Hibernate.model.Student;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -27,7 +28,7 @@ public class Course {
     @JoinTable(name = "studentcourses",
             joinColumns = @JoinColumn(name = "courseId"),
             inverseJoinColumns = @JoinColumn(name = "student_id"))
-    private List<Student> students;
+    private List<Hibernate.model.Student> students;
 
     public Course(String name) {
         this.name = name;

@@ -10,7 +10,7 @@ public class HibernateSession implements AutoCloseable {
 
     public HibernateSession() {
         this.sessionFactory = new Configuration()
-                .configure("hibernate.cfg.xml")
+                .configure("hibernate.cfg2.xml")
                 .addAnnotatedClass(Student.class)
                 .addAnnotatedClass(Course.class)
                 .buildSessionFactory();

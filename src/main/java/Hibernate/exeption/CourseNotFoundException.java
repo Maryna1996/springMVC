@@ -20,3 +20,4 @@ public class CourseNotFoundException extends RuntimeException {
         super(message, cause, enableSuppression, writableStackTrace);
     }
 }
+
